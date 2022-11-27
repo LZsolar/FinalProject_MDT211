@@ -1,10 +1,17 @@
-public class Teacher: Person {
-    private string position;
-    private string car;
+public class Teacher {
+    private string username;
+    private string password;
 
-   public Teacher(string title,string name,string surname,string age,string position,string allergy,string religion,string car,bool isAdmin,string email,string pass)
-    : base(title,name,surname,age,allergy,religion,isAdmin) {
+    public Teacher(string username,string password) {
+        this.username = username;
+        this.password = password;
+    }
 
+    public string getUser(){
+        return this.username;
+    }
+    public string getPassword(){
+        return this.password;
     }
 
 }
