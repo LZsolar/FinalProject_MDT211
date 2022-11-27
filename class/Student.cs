@@ -1,8 +1,21 @@
-public class CurrStudent: Person {
-    private string studentID;
-    public CurrStudent(string title,string name,string surname,string studentID,string age,string allergy,string religion,bool isAdmin,string email,string pass)
-    : base(title,name,surname,age,allergy,religion,isAdmin) {
-        this.studentID = studentID;
+public class Student {
+    private string username;
+    private string password;
+    private List<string> subjectList;
+    public Student(string username,string password) {
+        this.subjectList = new List<String>();
+        this.username = username;
+        this.password = password;
     }
 
+    public string getUser(){
+        return this.username;
+    }
+    public string getPassword(){
+        return this.password;
+    }
+
+    public void addSubject(string a){
+        this.subjectList.Add(a);
+    }
 }
