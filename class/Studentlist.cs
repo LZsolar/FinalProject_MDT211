@@ -11,13 +11,20 @@ class StudentList {
         this.personList.Add(student);
     }
 
-     public bool findAccount(string username,string password){
+    public bool findAccount(string username,string password){
         foreach(Student student in this.personList) {
             if(student.getUser()==username&&student.getPassword()==password){
                 return true;
             }
         }
         return false;
+    }
+    public void findStudentAndPrintSubject(string username){
+        foreach(Student student in this.personList) {
+            if(student.getUser()==username){
+                student.printSubject(); break;
+            }
+        }
     }
   
 }

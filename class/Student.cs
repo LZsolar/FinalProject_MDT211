@@ -18,4 +18,11 @@ public class Student {
     public void addSubject(string a){
         this.subjectList.Add(a);
     }
+
+    public void printSubject(){
+        Console.WriteLine("***** Register Subject List *****");
+        foreach(string a in this.subjectList) {
+            Console.WriteLine(a);
+        }
+    }
 }
