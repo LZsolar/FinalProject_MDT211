@@ -30,5 +30,16 @@ class SubjectList {
         }
         return null;
     }
+    public bool isSubjectFull(string id){
+        foreach(Subject subject in this.subjectList) {
+            if(id == subject.getID()){
+                if(subject.GetAvalible()==subject.GetEnrollNumber()){
+                    return true;
+                }
+                else{return false;}
+            }
+        }
+        return true;
+    }
     
 }

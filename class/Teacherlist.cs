@@ -11,9 +11,17 @@ class TeacherList {
         this.teacherList.Add(teacher);
     }
 
-     public bool findAccount(string username,string password){
+    public bool findAccount(string username,string password){
         foreach(Teacher teacher in this.teacherList) {
             if(teacher.getUser()==username&&teacher.getPassword()==password){
+                return true;
+            }
+        }
+        return false;
+    }
+     public bool findAccountForRegister(string username){
+        foreach(Teacher teacher in this.teacherList) {
+            if(teacher.getUser()==username){
                 return true;
             }
         }

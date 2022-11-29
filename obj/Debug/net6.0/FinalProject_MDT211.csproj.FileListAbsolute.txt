@@ -1,0 +1,15 @@
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\bin\Debug\net6.0\FinalProject_MDT211.exe
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\bin\Debug\net6.0\FinalProject_MDT211.deps.json
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\bin\Debug\net6.0\FinalProject_MDT211.runtimeconfig.json
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\bin\Debug\net6.0\FinalProject_MDT211.dll
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\bin\Debug\net6.0\ref\FinalProject_MDT211.dll
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\bin\Debug\net6.0\FinalProject_MDT211.pdb
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\obj\Debug\net6.0\FinalProject_MDT211.csproj.AssemblyReference.cache
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\obj\Debug\net6.0\FinalProject_MDT211.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\obj\Debug\net6.0\FinalProject_MDT211.AssemblyInfoInputs.cache
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\obj\Debug\net6.0\FinalProject_MDT211.AssemblyInfo.cs
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\obj\Debug\net6.0\FinalProject_MDT211.csproj.CoreCompileInputs.cache
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\obj\Debug\net6.0\FinalProject_MDT211.dll
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\obj\Debug\net6.0\ref\FinalProject_MDT211.dll
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\obj\Debug\net6.0\FinalProject_MDT211.pdb
+C:\Users\EAM\Desktop\เทอมแรกต้องรอด\mdt211\FinalProject_MDT211\obj\Debug\net6.0\FinalProject_MDT211.genruntimeconfig.cache

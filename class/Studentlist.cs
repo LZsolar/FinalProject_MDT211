@@ -19,6 +19,14 @@ class StudentList {
         }
         return false;
     }
+    public bool findAccountForRegister(string username){
+        foreach(Student student in this.personList) {
+            if(student.getUser()==username){
+                return true;
+            }
+        }
+        return false;
+    }
     public void findStudentAndPrintSubject(string username){
         foreach(Student student in this.personList) {
             if(student.getUser()==username){

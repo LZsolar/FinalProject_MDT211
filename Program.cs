@@ -87,13 +87,17 @@ class Program
 
         int x = int.Parse(Console.ReadLine());
         if(x==1){InputNewStudent();}
-        if(x==2){InputNewTeacher();}
+        else if(x==2){InputNewTeacher();}
+        else {Console.WriteLine("Command Not found. return to menu");Console.ReadLine(); checkLoginStatus();}
 }
 static void InputNewStudent() {
     Console.WriteLine("Register new Student");
     Console.WriteLine("***************************");
     string name = inputName();
     string password = inputPassword();
+    if(studentList.findAccountForRegister(name)){
+        Console.WriteLine("Username used. Press Enter to continue."); Console.ReadLine();InputNewStudent();return;
+    }
     Student student = new Student(name,password);
 
     Program.studentList.AddNewPerson(student);
@@ -104,6 +108,9 @@ static void InputNewTeacher() {
     Console.WriteLine("***************************");
     string name = inputName();
     string password = inputPassword();
+    if(teacherList.findAccountForRegister(name)){
+        Console.WriteLine("Username used. Press Enter to continue."); Console.ReadLine();InputNewTeacher();return;
+    }
     Teacher teacher = new Teacher(name,password);
 
     Program.teacherList.AddNewPerson(teacher);
@@ -125,6 +132,7 @@ public static void studentLoginMenu(){
             Console.WriteLine("************************");
             Console.WriteLine("Incorrect email or password. Please try again.\n");
             Console.WriteLine("************************");
+            Console.ReadLine();
             studentLoginMenu();
             return;
         }
@@ -142,6 +150,7 @@ public static void studentLoginMenu(){
             Console.WriteLine("************************");
             Console.WriteLine("Incorrect email or password. Please try again.\n");
             Console.WriteLine("************************");
+            Console.ReadLine();
             teacherLoginMenu();
             return;
         }
@@ -167,14 +176,20 @@ public static void studentLoginMenu(){
         Console.WriteLine("Welcome to AddSubject Menu");
         string id = inputSID();
         string name = inputSName();
-        Subject newSubject = new Subject(id,name);
+        int maxStu = inputMax();
+        if(subjectList.findSubject(id)){
+            Console.WriteLine("Subject ID unavalible. Please Try again."); Console.Read();checkLoginStatus();return;
+        }
+        Subject newSubject = new Subject(id,name,maxStu);
         Program.subjectList.AddNewSubject(newSubject);
 
         Console.WriteLine("Add complete. Press Enter to continue");
+        Console.ReadLine();
         checkLoginStatus();
     }
 static string inputSID(){Console.Write("Please input Subject ID: "); return Console.ReadLine();}
 static string inputSName(){Console.Write("Please input your Subject Name: "); return Console.ReadLine();}
+static int inputMax(){Console.Write("Please input your Subject Max student: "); return int.Parse(Console.ReadLine());}
 
 
     //STUDENT
@@ -189,7 +204,11 @@ static string inputSName(){Console.Write("Please input your Subject Name: "); re
             Console.Clear();
             enrollSubject(); return;
         }
-        Subject newSubject = new Subject(id,subjectList.getSubjectName(id));
+        Console.Write("Are you sure to enroll in " + subjectList.getSubjectName(id)+" ? (Y/N)");
+        string temp = Console.ReadLine();
+        if(temp!="Y"){Console.Write("Register cancel. Back to menu."); checkLoginStatus(); return;}
+
+        Subject newSubject = new Subject(id,subjectList.getSubjectName(id),99);
         studentList.addSubject(currentLogin,newSubject);
         Console.Write("Register Complete. Press Enter to continue");
         Console.ReadLine();
