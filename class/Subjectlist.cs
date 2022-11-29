@@ -17,4 +17,18 @@ class SubjectList {
             Console.WriteLine("ID: "+subject.getID()+"  Name: "+subject.GetName());
         }
     }
+
+    public bool findSubject(string a){
+        foreach(Subject subject in this.subjectList) {
+            if(a == subject.getID()){return true;}
+        }
+        return false;
+    }
+    public string getSubjectName(string id){
+        foreach(Subject subject in this.subjectList) {
+            if(id == subject.getID()){return subject.GetName();}
+        }
+        return null;
+    }
+    
 }

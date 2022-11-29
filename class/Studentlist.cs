@@ -26,5 +26,21 @@ class StudentList {
             }
         }
     }
+
+    public void addSubject(string user,Subject subject){
+        foreach(Student student in this.personList) {
+            if(student.getUser()==user){
+                student.addSubject(subject); break;
+            }
+        }
+    }
+
+     public void ShowEnroll(string user){
+        foreach(Student student in this.personList) {
+            if(student.getUser()==user){
+                student.printSubject(); break;
+            }
+        }
+    }
   
 }

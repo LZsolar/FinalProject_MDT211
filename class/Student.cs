@@ -1,9 +1,9 @@
 public class Student {
     private string username;
     private string password;
-    private List<string> subjectList;
+    private List<Subject> subjectList;
     public Student(string username,string password) {
-        this.subjectList = new List<String>();
+        this.subjectList = new List<Subject>();
         this.username = username;
         this.password = password;
     }
@@ -15,14 +15,15 @@ public class Student {
         return this.password;
     }
 
-    public void addSubject(string a){
+    public void addSubject(Subject a){
         this.subjectList.Add(a);
     }
 
     public void printSubject(){
         Console.WriteLine("***** Register Subject List *****");
-        foreach(string a in this.subjectList) {
-            Console.WriteLine(a);
+        foreach(Subject subject in this.subjectList) {
+            Console.WriteLine("ID: "+subject.getID()+"  Name: "+subject.GetName());
         }
     }
+
 }
