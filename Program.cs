@@ -204,10 +204,17 @@ static int inputMax(){Console.Write("Please input your Subject Max student: "); 
             Console.Clear();
             enrollSubject(); return;
         }
+        if(!subjectList.isSubjectFull(id)){
+            Console.WriteLine("Subject reach max limit. Please try again.");
+            Console.ReadLine();
+            Console.Clear();
+            enrollSubject(); return;
+        }
         Console.Write("Are you sure to enroll in " + subjectList.getSubjectName(id)+" ? (Y/N)");
         string temp = Console.ReadLine();
         if(temp!="Y"){Console.Write("Register cancel. Back to menu."); checkLoginStatus(); return;}
 
+        subjectList.addStudent(id);
         Subject newSubject = new Subject(id,subjectList.getSubjectName(id),99);
         studentList.addSubject(currentLogin,newSubject);
         Console.Write("Register Complete. Press Enter to continue");

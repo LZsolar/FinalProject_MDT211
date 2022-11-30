@@ -23,4 +23,7 @@ public class Subject {
     public int GetAvalible(){
         return this.enrollAvalibleNumber;
     }
+    public void AddEnrollNumber(){
+        this.enrollNumber++;
+    }
 }

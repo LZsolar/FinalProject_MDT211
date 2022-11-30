@@ -12,9 +12,9 @@ class SubjectList {
     }
 
     public void printSubject(){
-        Console.WriteLine("***** Avelible Subject List *****");
+        Console.WriteLine("***** Subject List *****");
         foreach(Subject subject in this.subjectList) {
-            Console.WriteLine("ID: "+subject.getID()+"  Name: "+subject.GetName());
+            Console.WriteLine("ID: "+subject.getID()+"  Name: "+subject.GetName() + " Current: "+subject.GetEnrollNumber()+"/"+subject.GetAvalible());
         }
     }
 
@@ -40,6 +40,14 @@ class SubjectList {
             }
         }
         return true;
+    }
+
+    public void addStudent(string id){
+     foreach(Subject subject in this.subjectList) {
+            if(id == subject.getID()){
+                subject.AddEnrollNumber(); return;
+            }
+        }
     }
     
 }
