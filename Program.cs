@@ -204,11 +204,11 @@ static int inputMax(){Console.Write("Please input your Subject Max student: "); 
             Console.Clear();
             enrollSubject(); return;
         }
-        if(!subjectList.isSubjectFull(id)){
+        if(subjectList.isSubjectFull(id)){
             Console.WriteLine("Subject reach max limit. Please try again.");
             Console.ReadLine();
             Console.Clear();
-            enrollSubject(); return;
+            checkLoginStatus(); return;
         }
         Console.Write("Are you sure to enroll in " + subjectList.getSubjectName(id)+" ? (Y/N)");
         string temp = Console.ReadLine();
